@@ -28,6 +28,12 @@
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
+
+  <!-- JQuery Library
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>  -->
+
+  <!-- Ajax Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -84,12 +90,12 @@
           <p>Please fill the following form :</p>
         </div>
 
-        <form  class="diagnose-form">
+        <div  class="diagnose-form">
           
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Do you have breathing problems :</label>
             <div class="col-sm-10">
-              <select name="doctor" id="breathing-problems" class="form-select">
+              <select name="formInput" id="breathing-problems" class="form-select">
                 <option value="">Select Value</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
@@ -100,7 +106,7 @@
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Do you have fever :</label>
             <div class="col-sm-10">
-              <select name="doctor" id="fever" class="form-select">
+              <select name="formInput" id="fever" class="form-select">
                 <option value="">Select Value</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
@@ -111,7 +117,7 @@
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Do you have dry cough :</label>
             <div class="col-sm-10">
-              <select name="doctor" id="dry-cough" class="form-select">
+              <select name="formInput" id="dry-cough" class="form-select">
                 <option value="">Select Value</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
@@ -122,7 +128,7 @@
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Do you have sore throat :</label>
             <div class="col-sm-10">
-              <select name="doctor" id="sore-throat" class="form-select">
+              <select name="formInput" id="sore-throat" class="form-select">
                 <option value="">Select Value</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
@@ -133,7 +139,7 @@
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Do you have hypertension :</label>
             <div class="col-sm-10">
-              <select name="doctor" id="hypertension " class="form-select">
+              <select name="formInput" id="hypertension " class="form-select">
                 <option value="">Select Value</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
@@ -144,7 +150,7 @@
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Do you travel abroad :</label>
             <div class="col-sm-10">
-              <select name="doctor" id="abroad-travel" class="form-select">
+              <select name="formInput" id="abroad-travel" class="form-select">
                 <option value="">Select Value</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
@@ -155,7 +161,7 @@
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Do you contact with COVID patient :</label>
             <div class="col-sm-10">
-              <select name="doctor" id="contact-with-covid-patient" class="form-select">
+              <select name="formInput" id="contact-with-covid-patient" class="form-select">
                 <option value="">Select Value</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
@@ -166,7 +172,7 @@
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Do you attend large gathering :</label>
             <div class="col-sm-10">
-              <select name="doctor" id="attended-large-gathering" class="form-select">
+              <select name="formInput" id="attended-large-gathering" class="form-select">
                 <option value="">Select Value</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
@@ -177,7 +183,7 @@
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Do you visit public exposed places :</label>
             <div class="col-sm-10">
-              <select name="doctor" id="visited-public-exposed-places" class="form-select">
+              <select name="formInput" id="visited-public-exposed-places" class="form-select">
                 <option value="">Select Value</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
@@ -188,7 +194,7 @@
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Does your family working in public exposed places :</label>
             <div class="col-sm-10">
-              <select name="doctor" id="family-working-in-public-exposed-places" class="form-select">
+              <select name="formInput" id="family-working-in-public-exposed-places" class="form-select">
                 <option value="">Select Value</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
@@ -196,15 +202,17 @@
             </div>
           </div>
 
-          <div class="alert alert-success alert-text" role="alert">
+          <div class="alert alert-success alert-text" role="alert" id="negative-alert">
             Your result is Negative <i class="bi bi-emoji-smile"></i>
           </div>
-          <div class="alert alert-danger alert-text" role="alert">
+          <div class="alert alert-danger alert-text" role="alert" id="positive-alert">
             Your result is Positive <i class="bi bi-emoji-frown"></i> 
           </div>
           
-          <div class="text-center"><button type="submit">Submit</button></div>
-        </form>
+          <div class="text-center">
+            <button id="covid" onclick="predict(this.id)">Submit</button>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -283,6 +291,9 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
+
+  <!-- API Handler file -->
+  <script src="../assets/js/apiHandler.js"></script>
 
 </body>
 

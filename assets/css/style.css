@@ -854,7 +854,7 @@ section {
 .form .diagnose-form textarea {
   padding: 10px 12px;
 }
-.form .diagnose-form button[type=submit] {
+.form .diagnose-form button {
   background: #1977cc;
   border: 0;
   padding: 10px 35px;
@@ -862,7 +862,7 @@ section {
   transition: 0.4s;
   border-radius: 50px;
 }
-.form .diagnose-form button[type=submit]:hover {
+.form .diagnose-form button:hover {
   background: #1c84e3;
 }
 
