@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Covid-19</title>
+  <title>Heart Stroke</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -28,6 +28,9 @@
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
+
+  <!-- JQuery Library
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>  -->
 
   <!-- Ajax Library -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -90,53 +93,27 @@
         <div  class="diagnose-form">
           
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Do you have breathing problems :</label>
+            <label class="col-sm-2 col-form-label">Gender :</label>
             <div class="col-sm-10">
-              <select name="formInput" id="breathing-problems" class="form-select">
+              <select name="formInput" id="gender" class="form-select">
                 <option value="">Select Value</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
               </select>
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Do you have fever :</label>
+            <label class="col-sm-2 col-form-label">Age :</label>
             <div class="col-sm-10">
-              <select name="formInput" id="fever" class="form-select">
-                <option value="">Select Value</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Do you have dry cough :</label>
-            <div class="col-sm-10">
-              <select name="formInput" id="dry-cough" class="form-select">
-                <option value="">Select Value</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Do you have sore throat :</label>
-            <div class="col-sm-10">
-              <select name="formInput" id="sore-throat" class="form-select">
-                <option value="">Select Value</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
+              <input id="age" class="form-select" type="number"/>
             </div>
           </div>
 
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Do you have hypertension :</label>
             <div class="col-sm-10">
-              <select name="formInput" id="hypertension " class="form-select">
+              <select name="formInput" id="hypertension" class="form-select">
                 <option value="">Select Value</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
@@ -145,9 +122,9 @@
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Did you travel abroad :</label>
+            <label class="col-sm-2 col-form-label">Do you have heart disease :</label>
             <div class="col-sm-10">
-              <select name="formInput" id="abroad-travel" class="form-select">
+              <select name="formInput" id="heart-disease" class="form-select">
                 <option value="">Select Value</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
@@ -156,9 +133,9 @@
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Did you contact with COVID patient :</label>
+            <label class="col-sm-2 col-form-label">Have you ever been married :</label>
             <div class="col-sm-10">
-              <select name="formInput" id="contact-with-covid-patient" class="form-select">
+              <select name="formInput" id="ever-married" class="form-select">
                 <option value="">Select Value</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
@@ -167,34 +144,33 @@
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Did you attend large gathering :</label>
+            <label class="col-sm-2 col-form-label">What is your average glucose level :</label>
             <div class="col-sm-10">
-              <select name="formInput" id="attended-large-gathering" class="form-select">
-                <option value="">Select Value</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
+              <input id="avg-glucose-level" class="form-select" type="number"/>
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Did you visit public exposed places :</label>
+            <label class="col-sm-2 col-form-label">
+              What is your BMI :  
+              <a href="https://www.diabetes.ca/managing-my-diabetes/tools---resources/body-mass-index-(bmi)-calculator#:~:text=Body%20Mass%20Index%20is%20a,most%20adults%2018%2D65%20years." target="_blank">
+                <i class="bi bi-calculator-fill"></i>
+              </a>
+            </label>
             <div class="col-sm-10">
-              <select name="formInput" id="visited-public-exposed-places" class="form-select">
-                <option value="">Select Value</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
+              <input id="bmi" class="form-select" type="number"/>
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Does your family working in public exposed places :</label>
+            <label class="col-sm-2 col-form-label">What is your smoking status :</label>
             <div class="col-sm-10">
-              <select name="formInput" id="family-working-in-public-exposed-places" class="form-select">
+              <select name="formInput" id="smoking-status" class="form-select">
                 <option value="">Select Value</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
+                <option value="0">Unknown</option>
+                <option value="1">Formerly smoked</option>
+                <option value="2">Never smoked</option>
+                <option value="3">Smokes</option>
               </select>
             </div>
           </div>
@@ -210,7 +186,7 @@
           </div>
           
           <div class="text-center">
-            <button id="covid" onclick="predict(this.id)">Submit</button>
+            <button id="stroke" onclick="predict(this.id)">Submit</button>
           </div>
         </div>
 
