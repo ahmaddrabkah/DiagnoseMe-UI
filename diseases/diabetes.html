@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Heart Stroke</title>
+  <title>Diabetes</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -93,60 +93,37 @@
         <div  class="diagnose-form">
           
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Gender :</label>
+            <label class="col-sm-2 col-form-label">How many Pregnancies :</label>
             <div class="col-sm-10">
-              <select name="formInput" id="gender" class="form-select">
-                <option value="">Select Value</option>
-                <option value="1">Male</option>
-                <option value="0">Female</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Age :</label>
-            <div class="col-sm-10">
-              <input id="age" class="form-select" type="number"/>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Do you have hypertension :</label>
-            <div class="col-sm-10">
-              <select name="formInput" id="hypertension" class="form-select">
-                <option value="">Select Value</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Do you have heart disease :</label>
-            <div class="col-sm-10">
-              <select name="formInput" id="heart-disease" class="form-select">
-                <option value="">Select Value</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Have you ever been married :</label>
-            <div class="col-sm-10">
-              <select name="formInput" id="ever-married" class="form-select">
-                <option value="">Select Value</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
+                <input id="age" class="form-select" type="number"/>
             </div>
           </div>
 
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">What is your average glucose level :</label>
             <div class="col-sm-10">
-              <input id="avg-glucose-level" class="form-select" type="number"/>
+              <input id="glucose" class="form-select" type="number"/>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">What is your blood pressure :</label>
+            <div class="col-sm-10">
+                <input id="blood-pressure" class="form-select" type="number"/>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">What is your skin thickness :</label>
+            <div class="col-sm-10">
+                <input id="skin-thickness" class="form-select" type="number"/>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label"> What is your insulin average :</label>
+            <div class="col-sm-10">
+                <input id="insulin" class="form-select" type="number"/>
             </div>
           </div>
 
@@ -163,15 +140,16 @@
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">What is your smoking status :</label>
+            <label class="col-sm-2 col-form-label">What is the likelihood of diabetes based on family history :</label>
             <div class="col-sm-10">
-              <select name="formInput" id="smoking-status" class="form-select">
-                <option value="">Select Value</option>
-                <option value="0">Unknown</option>
-                <option value="1">Formerly smoked</option>
-                <option value="2">Never smoked</option>
-                <option value="3">Smokes</option>
-              </select>
+                <input id="diabetes-pedigree-function" class="form-select" type="number"/>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Age :</label>
+            <div class="col-sm-10">
+                <input id="age" class="form-select" type="number"/>
             </div>
           </div>
 
@@ -186,7 +164,7 @@
           </div>
           
           <div class="text-center">
-            <button id="stroke" onclick="predict(this.id)">Submit</button>
+            <button id="diabetes" onclick="predict(this.id)">Submit</button>
           </div>
         </div>
 

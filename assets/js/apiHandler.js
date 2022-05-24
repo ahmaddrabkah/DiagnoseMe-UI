@@ -1,4 +1,4 @@
-let url = 'http://localhost:8080/';
+let url = 'http://diagnoseme-web.azurewebsites.net/';
 function predict(controllerName){
     var values = [];
     $(".form-select").each(function () {
