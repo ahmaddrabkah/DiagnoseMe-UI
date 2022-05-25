@@ -1,4 +1,4 @@
-let url = 'http://diagnoseme-web.azurewebsites.net/';
+let url = 'https://diagnoseme-web.azurewebsites.net/';
 function predict(controllerName){
     var values = [];
     $(".form-select").each(function () {
