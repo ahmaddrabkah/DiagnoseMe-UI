@@ -13,6 +13,9 @@ function predict(controllerName){
         contentType: 'application/json',
         success : function(data){
             modal.style.display = "block";
+            $('#div-alert').removeClass();
+            $('#alert-icon').removeClass();
+            $('#div-alert').addClass('center-content');
             if(data === true){
                 $('#div-alert').addClass('alert alert-danger');
                 $('#h5-alert').text('Your result is Positive');
