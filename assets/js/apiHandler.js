@@ -1,4 +1,5 @@
 let url = 'https://diagnoseme-web.azurewebsites.net/';
+
 function predict(controllerName){
     var values = [];
     $(".form-select").each(function () {
@@ -15,7 +16,7 @@ function predict(controllerName){
             modal.style.display = "block";
             $('#div-alert').removeClass();
             $('#alert-icon').removeClass();
-            $('#div-alert').addClass('center-content');
+            $('#div-alert').addClass('text-center');
             if(data === true){
                 $('#div-alert').addClass('alert alert-danger');
                 $('#h5-alert').text('Your result is Positive');
